@@ -2,8 +2,6 @@ package Entities;
 
 import java.util.Map;
 
-import Application.Settings;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
