@@ -61,11 +61,12 @@ public class Port {
     }
 
     public void receiveMessageFromCable(Packet pack) {
+        receiveQueue.add(pack);
         if (host != null) {
-            host.receiveMessage(pack);
+            host.receiveMessage(receiveQueue.poll());
         }
         else {
-            switch1.sendMessage(pack);
+            switch1.sendMessage(receiveQueue.poll());
         }
     }
 }
