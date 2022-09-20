@@ -55,7 +55,6 @@ public class Port {
     }
 
     public void sendMessageByCable(Packet pack) {
-        // cable.send(pack);
         sendQueue.add(pack);
         cable.send(sendQueue.poll(), this);
     }
