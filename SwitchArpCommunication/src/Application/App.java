@@ -24,6 +24,7 @@ public class App {
 
         System.out.println("");
         System.out.println("TABLES FROM SWITCH");
+        System.out.println("----------------------------------------------------");
         System.out.println("Switch: " + switch1.getMacTable().toString().replaceAll(",", ";").replaceAll("=", ", "));
         System.out.println("Host1: " + h1.getMacTable().toString().replaceAll(",", ";").replaceAll("=", ", "));
         System.out.println("Host2: " + h2.getMacTable().toString().replaceAll(",", ";").replaceAll("=", ", "));
