@@ -53,6 +53,9 @@ public class Switch {
     }
 
     public void sendMessage(Packet pack) {
+        System.out.println("Enviando pacote pelo switch");
+        pack.print();
+        
         Boolean isArp = pack.isArp();
 
         if (shouldSave(pack)) {

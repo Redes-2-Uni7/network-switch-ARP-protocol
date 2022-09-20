@@ -57,6 +57,13 @@ public class Host {
     }
 
     public void receiveMessage(Packet pack) {
+        System.out.println("Recebendo pacote pelo host" + (mac.equals(Settings.macSource1) ? "1" 
+                                                        : mac.equals(Settings.macSource2) ? "2" 
+                                                        : mac.equals(Settings.macSource3) ? "3" 
+                                                        : mac.equals(Settings.macSource4) ? "4" 
+                                                        : "" ));
+        pack.print();
+
         Boolean isArp = pack.isArp();
         Boolean isToMe = isToMe(pack);
 
@@ -75,6 +82,12 @@ public class Host {
     }
     
     public void sendMessage(Packet pack) {
+        System.out.println("Enviando pacote pelo host" + (mac.equals(Settings.macSource1) ? "1" 
+                                                        : mac.equals(Settings.macSource2) ? "2" 
+                                                        : mac.equals(Settings.macSource3) ? "3" 
+                                                        : mac.equals(Settings.macSource4) ? "4" 
+                                                        : "" ));
+        pack.print();
         port.sendMessageByCable(pack);
     }
 }

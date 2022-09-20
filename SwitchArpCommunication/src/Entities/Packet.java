@@ -66,4 +66,14 @@ public class Packet {
     public Boolean isArp() {
         return this.destinationMac == Settings.macBroadcast;
     }
+
+    public void print() {
+        System.out.println("Print do pacote: " + this.payload);
+        System.out.println("");
+        System.out.println("Source Mac: " + this.sourceMac);
+        System.out.println("Source Ip: " + this.sourceIp);
+        System.out.println("Destination Mac: " + this.destinationMac);
+        System.out.println("Destination Ip: " + this.destinationIp);
+        System.out.println("");
+    }
 }
