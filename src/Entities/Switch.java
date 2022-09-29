@@ -70,12 +70,11 @@ public class Switch {
         if (isArp) {
             broadcast(pack);
         }
-        
-        if (portKnowed(pack))
+        else if (portKnowed(pack))
         {
             ports.get(macTable.get(pack.getDestinationMac()) - 1).sendMessageByCable(pack);
         }
-        else if (!isArp) {
+        else {
             broadcast(pack);
         }
     }
