@@ -56,7 +56,7 @@ public class Switch {
         System.out.println("Enviando pacote pelo switch");
         pack.print();
         
-        Boolean isArp = pack.isArp();
+        Boolean isArp = pack.isBroadcast();
 
         if (shouldSave(pack)) {
             Port port = new Port();

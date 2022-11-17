@@ -64,7 +64,7 @@ public class Host {
                                                         : "" ));
         pack.print();
 
-        Boolean isArp = pack.isArp();
+        Boolean isArp = pack.isBroadcast();
         Boolean isToMe = isToMe(pack);
 
         if (!isToMe && !isArp) { return; }

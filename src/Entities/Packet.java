@@ -63,7 +63,7 @@ public class Packet {
         this.payload = payload;
     }
     
-    public Boolean isArp() {
+    public Boolean isBroadcast() { //isBroadcast
         return this.destinationMac == Settings.macBroadcast;
     }
 
